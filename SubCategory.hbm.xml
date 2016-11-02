@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 31, 2016 11:51:57 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.SubCategory" table="sub_category" catalog="e_commerce" optimistic-lock="version">
+        <id name="subCatId" type="int">
+            <column name="sub_cat_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="catId" type="int">
+            <column name="cat_id" not-null="true" />
+        </property>
+        <property name="subCatName" type="string">
+            <column name="sub_cat_name" length="46" not-null="true" />
+        </property>
+        <property name="subCatDesc" type="string">
+            <column name="sub_cat_desc" length="200" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>

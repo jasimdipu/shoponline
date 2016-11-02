@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Oct 31, 2016 11:51:57 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="entity.ShopUser" table="shop_user" catalog="e_commerce" optimistic-lock="version">
+        <id name="userId" type="int">
+            <column name="user_id" />
+            <generator class="assigned" />
+        </id>
+        <property name="userName" type="string">
+            <column name="user_name" length="50" not-null="true" />
+        </property>
+        <property name="password" type="string">
+            <column name="password" length="100" not-null="true" />
+        </property>
+        <property name="email" type="string">
+            <column name="email" length="100" not-null="true" />
+        </property>
+        <property name="regDate" type="date">
+            <column name="reg_date" length="10" not-null="true" />
+        </property>
+        <property name="contuctNo" type="string">
+            <column name="contuct_no" length="20" not-null="true" />
+        </property>
+        <property name="roleId" type="int">
+            <column name="role_id" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
